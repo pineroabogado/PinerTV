@@ -1,0 +1,22 @@
+android_project/.gradle/
+android_project/build/
+android_project/app/build/
+android_project/local.properties
+*.iml
+.idea/
+.DS_Store
+
+# Secrets / signing
+*.jks
+*.keystore
+**/keystore.properties
+**/secrets.properties
+**/.env
+**/.env.*
+
+# Generated BuildConfig with baked keys (under build/, but be explicit)
+**/BuildConfig.java
+
+# Local crash / log dumps
+crash_logcat*.txt*
+*.log

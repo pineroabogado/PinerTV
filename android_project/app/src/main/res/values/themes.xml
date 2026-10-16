@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.PinerTV" parent="Theme.Leanback">
+        <item name="android:windowBackground">@color/emby_bg</item>
+        <item name="android:colorPrimary">@color/emby_accent</item>
+        <item name="defaultSearchColor">@color/emby_accent</item>
+        <item name="defaultBrandColor">@color/emby_bg_deep</item>
+        <item name="browseTitleTextStyle">@style/PinerTV.Title</item>
+        <item name="browseRowsMarginTop">100dp</item>
+        <item name="browsePaddingStart">24dp</item>
+        <item name="browsePaddingEnd">48dp</item>
+        <item name="headersVerticalGridStyle">@style/PinerTV.Headers</item>
+        <item name="rowHeaderStyle">@style/PinerTV.RowHeader</item>
+    </style>
+
+    <style name="Theme.PinerTV.Splash" parent="Theme.Leanback">
+        <item name="android:windowBackground">@drawable/bg_splash_gradient</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="PinerTV.Title" parent="TextAppearance.Leanback.Title">
+        <item name="android:textColor">@color/emby_accent</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="PinerTV.RowHeader" parent="Widget.Leanback.Row.Header">
+        <item name="android:textColor">@color/emby_text</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="PinerTV.Headers" parent="Widget.Leanback.Headers.VerticalGridView">
+        <item name="android:background">@drawable/bg_home_headers</item>
+    </style>
+</resources>

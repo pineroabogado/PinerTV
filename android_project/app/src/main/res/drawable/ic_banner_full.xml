@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="180dp"
+    android:viewportWidth="320"
+    android:viewportHeight="180">
+    <path
+        android:fillColor="#0E0E12"
+        android:pathData="M0,0h320v180h-320z" />
+    <!-- Accent bar left -->
+    <path
+        android:fillColor="#52B54B"
+        android:pathData="M0,0h6v180h-6z" />
+    <!-- Icon tile -->
+    <path
+        android:fillColor="#52B54B"
+        android:pathData="M48,62 h56 a10,10 0 0 1 10,10 v36 a10,10 0 0 1 -10,10 h-56 a10,10 0 0 1 -10,-10 v-36 a10,10 0 0 1 10,-10 z" />
+    <!-- Play -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M68,78 L68,116 L98,97 Z" />
+    <!-- Wordmark pinertv -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M130,78 h8 v24 h-8 z" />
+    <!-- Simplified: use text via path approximations is hard; draw bars as brand mark -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M148,78 h42 v7 h-42 z" />
+    <path
+        android:fillColor="#52B54B"
+        android:pathData="M148,92 h56 v7 h-56 z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M148,106 h48 v7 h-48 z" />
+</vector>

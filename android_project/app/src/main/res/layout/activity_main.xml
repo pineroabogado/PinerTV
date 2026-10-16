@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/emby_bg_deep"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <ImageView
+        android:id="@+id/imgHeroBackdrop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:focusable="false"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_hero_scrim"
+        android:focusable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_topbar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:contentDescription="@string/app_name"
+            android:focusable="false"
+            android:src="@drawable/ic_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:focusable="false"
+            android:text="pinertv"
+            android:textColor="@color/emby_text"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnNavHome"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="28dp"
+            android:background="@drawable/selector_nav_tab"
+            android:focusable="true"
+            android:minWidth="0dp"
+            android:nextFocusDown="@id/gridContinue"
+            android:nextFocusRight="@id/btnNavMovies"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:text="Inicio"
+            android:textAllCaps="false"
+            android:textColor="@color/emby_accent"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnNavMovies"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/selector_nav_tab"
+            android:focusable="true"
+            android:minWidth="0dp"
+            android:nextFocusDown="@id/gridContinue"
+            android:nextFocusLeft="@id/btnNavHome"
+            android:nextFocusRight="@id/btnNavSeries"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:text="Películas"
+            android:textAllCaps="false"
+            android:textColor="@color/emby_text_secondary"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnNavSeries"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/selector_nav_tab"
+            android:focusable="true"
+            android:minWidth="0dp"
+            android:nextFocusDown="@id/gridContinue"
+            android:nextFocusLeft="@id/btnNavMovies"
+            android:nextFocusRight="@id/btnSearch"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:text="Series"
+            android:textAllCaps="false"
+            android:textColor="@color/emby_text_secondary"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:focusable="false" />
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/bg_avatar_circle"
+            android:contentDescription="@null"
+            android:focusable="false"
+            android:padding="5dp"
+            android:src="@drawable/ic_person" />
+
+        <TextView
+            android:id="@+id/txtUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="14dp"
+            android:focusable="false"
+            android:text="piner"
+            android:textColor="@color/emby_text_secondary"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/btnSearch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/selector_icon_btn"
+            android:contentDescription="@string/search"
+            android:focusable="true"
+            android:nextFocusDown="@id/gridContinue"
+            android:nextFocusLeft="@id/btnNavSeries"
+            android:nextFocusRight="@id/btnSettings"
+            android:padding="8dp"
+            android:src="@drawable/ic_search" />
+
+        <ImageButton
+            android:id="@+id/btnSettings"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/selector_icon_btn"
+            android:contentDescription="@string/settings"
+            android:focusable="true"
+            android:nextFocusDown="@id/gridContinue"
+            android:nextFocusLeft="@id/btnSearch"
+            android:padding="8dp"
+            android:src="@drawable/ic_settings" />
+
+        <TextView
+            android:id="@+id/txtClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:focusable="false"
+            android:textColor="@color/emby_text"
+            android:textSize="15sp"
+            tools:text="8:22" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutHero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:orientation="vertical"
+        android:paddingStart="40dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintWidth_percent="0.55">
+
+        <TextView
+            android:id="@+id/txtHeroTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:maxLines="1"
+            android:minLines="1"
+            android:singleLine="true"
+            android:textColor="@color/emby_text"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            tools:text="Título" />
+
+        <TextView
+            android:id="@+id/txtHeroMeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:maxLines="1"
+            android:minLines="1"
+            android:singleLine="true"
+            android:textColor="@color/emby_text_secondary"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtHeroOverview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:maxLines="1"
+            android:minLines="1"
+            android:singleLine="true"
+            android:textColor="#CCCCCC"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Zona de filas Emby: una fila principal completa + peek de la siguiente -->
+    <com.piner.pinertv.ui.widget.FocusStableNestedScrollView
+        android:id="@+id/scrollRows"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:fillViewport="false"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutHero">
+
+        <LinearLayout
+            android:id="@+id/layoutRows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:id="@+id/lblContinue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="@string/continue_watching"
+                android:textColor="@color/emby_text_secondary"
+                android:textSize="14sp" />
+
+            <androidx.leanback.widget.HorizontalGridView
+                android:id="@+id/gridContinue"
+                android:layout_width="match_parent"
+                android:layout_height="178dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:nextFocusUp="@id/btnNavHome"
+                android:nextFocusDown="@id/gridMovies"
+                android:paddingStart="56dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="8dp"
+                app:rowHeight="wrap_content" />
+
+            <TextView
+                android:id="@+id/lblMovies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="12dp"
+                android:focusable="false"
+                android:text="Películas estrenadas recientemente"
+                android:textColor="@color/emby_text_secondary"
+                android:textSize="14sp" />
+
+            <androidx.leanback.widget.HorizontalGridView
+                android:id="@+id/gridMovies"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:nextFocusUp="@id/gridContinue"
+                android:nextFocusDown="@id/gridSeries"
+                android:paddingStart="56dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="8dp"
+                app:rowHeight="244dp" />
+
+            <TextView
+                android:id="@+id/lblSeries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:focusable="false"
+                android:text="@string/series"
+                android:textColor="@color/emby_text_secondary"
+                android:textSize="14sp" />
+
+            <androidx.leanback.widget.HorizontalGridView
+                android:id="@+id/gridSeries"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:nextFocusUp="@id/gridMovies"
+                android:paddingStart="56dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="12dp"
+                app:rowHeight="244dp" />
+        </LinearLayout>
+    </com.piner.pinertv.ui.widget.FocusStableNestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Misma radio que selector_card_focus (6dp) → clip del póster = contorno verde -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/emby_surface" />
+    <corners android:radius="6dp" />
+</shape>

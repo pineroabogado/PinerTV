@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/emby_bg_deep"
+    android:fillViewport="true"
+    android:padding="48dp">
+
+    <LinearLayout
+        android:layout_width="640dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="48dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:textColor="@color/emby_accent"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Conexión NAS / Synology"
+            android:textColor="@color/emby_text_secondary"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/editUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="URL NAS (http://ip:5000)"
+            android:inputType="textUri"
+            android:nextFocusDown="@id/editHost"
+            android:textColor="@color/emby_text"
+            android:textColorHint="@color/emby_text_secondary" />
+
+        <EditText
+            android:id="@+id/editHost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="Host / IP"
+            android:inputType="text"
+            android:nextFocusDown="@id/editUser"
+            android:textColor="@color/emby_text"
+            android:textColorHint="@color/emby_text_secondary" />
+
+        <EditText
+            android:id="@+id/editUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="Usuario"
+            android:inputType="text"
+            android:nextFocusDown="@id/editPass"
+            android:textColor="@color/emby_text"
+            android:textColorHint="@color/emby_text_secondary" />
+
+        <EditText
+            android:id="@+id/editPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:nextFocusDown="@id/editMac"
+            android:textColor="@color/emby_text"
+            android:textColorHint="@color/emby_text_secondary" />
+
+        <EditText
+            android:id="@+id/editMac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="MAC WoL"
+            android:inputType="text"
+            android:nextFocusDown="@id/editBroadcast"
+            android:textColor="@color/emby_text"
+            android:textColorHint="@color/emby_text_secondary" />
+
+        <EditText
+            android:id="@+id/editBroadcast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="Broadcast"
+            android:inputType="text"
+            android:nextFocusDown="@id/btnSave"
+            android:textColor="@color/emby_text"
+            android:textColorHint="@color/emby_text_secondary" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/emby_accent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="Guardar"
+            android:textColor="@color/emby_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/library_report"
+            android:textColor="@color/emby_accent"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnLibraryReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/emby_surface_elevated"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="@string/open_library_report"
+            android:textColor="@color/emby_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/home_layout"
+            android:textColor="@color/emby_accent"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/rowHomeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/subtitle_appearance"
+            android:textColor="@color/emby_accent"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblSubSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/emby_text"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSubSizeDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/emby_surface_elevated"
+                android:focusable="true"
+                android:text="−"
+                android:textColor="@color/emby_text" />
+
+            <Button
+                android:id="@+id/btnSubSizeUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/emby_surface_elevated"
+                android:focusable="true"
+                android:text="+"
+                android:textColor="@color/emby_text" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/sub_color"
+            android:textColor="@color/emby_text_secondary"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSubWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/emby_surface_elevated"
+                android:focusable="true"
+                android:text="Blanco"
+                android:textColor="@color/emby_text" />
+
+            <Button
+                android:id="@+id/btnSubYellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/emby_surface_elevated"
+                android:focusable="true"
+                android:text="Amarillo"
+                android:textColor="@color/emby_text" />
+
+            <Button
+                android:id="@+id/btnSubCyan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/emby_surface_elevated"
+                android:focusable="true"
+                android:text="Cian"
+                android:textColor="@color/emby_text" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/sub_bg"
+            android:textColor="@color/emby_text_secondary"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSubBgNone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/emby_surface_elevated"
+                android:focusable="true"
+                android:text="Ninguno"
+                android:textColor="@color/emby_text" />
+
+            <Button
+                android:id="@+id/btnSubBgSemi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/emby_surface_elevated"
+                android:focusable="true"
+                android:text="Semi"
+                android:textColor="@color/emby_text" />
+
+            <Button
+                android:id="@+id/btnSubBgSolid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/emby_surface_elevated"
+                android:focusable="true"
+                android:text="Sólido"
+                android:textColor="@color/emby_text" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/emby_bg_deep"
+    android:clipChildren="false">
+
+    <ImageView
+        android:id="@+id/imgActorPhoto"
+        android:layout_width="160dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_card_poster"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtActorName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="48dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/emby_text"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgActorPhoto"
+        app:layout_constraintTop_toTopOf="@id/imgActorPhoto"
+        tools:text="Bob Odenkirk" />
+
+    <TextView
+        android:id="@+id/txtActorMeta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/emby_text_secondary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/txtActorName"
+        app:layout_constraintStart_toStartOf="@id/txtActorName"
+        app:layout_constraintTop_toBottomOf="@id/txtActorName"
+        tools:text="Acting" />
+
+    <TextView
+        android:id="@+id/txtActorBio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="2dp"
+        android:maxLines="5"
+        android:textColor="#DDDDDD"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/imgActorPhoto"
+        app:layout_constraintEnd_toEndOf="@id/txtActorName"
+        app:layout_constraintStart_toStartOf="@id/txtActorName"
+        app:layout_constraintTop_toBottomOf="@id/txtActorMeta"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:id="@+id/lblActorFilmography"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/filmography_local"
+        android:textColor="@color/emby_text_secondary"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgActorPhoto" />
+
+    <TextView
+        android:id="@+id/txtActorStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/loading_actor"
+        android:textColor="@color/emby_text_muted"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblActorFilmography" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gridActor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtActorStatus" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

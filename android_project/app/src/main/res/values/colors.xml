@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Emby-like dark theme (marca PinerTV) -->
+    <color name="emby_bg">#101014</color>
+    <color name="emby_bg_deep">#0A0A0C</color>
+    <color name="emby_surface">#1C1C22</color>
+    <color name="emby_surface_elevated">#25252D</color>
+    <color name="emby_accent">#52B54B</color>
+    <color name="emby_accent_dim">#3A8A35</color>
+    <color name="emby_text">#FFFFFF</color>
+    <color name="emby_text_secondary">#A8A8B0</color>
+    <color name="emby_text_muted">#6E6E78</color>
+    <color name="emby_focus">#52B54B</color>
+    <color name="emby_rating">#F5C518</color>
+    <color name="emby_scrim">#E6101014</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+</resources>

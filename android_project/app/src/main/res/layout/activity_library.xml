@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/emby_bg_deep"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <ImageView
+        android:id="@+id/imgLibBackdrop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:focusable="false"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_hero_scrim"
+        android:focusable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Menú: título + chips. Compacto. -->
+    <LinearLayout
+        android:id="@+id/libMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="28dp"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:translationZ="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtLibTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:focusable="false"
+            android:textColor="@color/emby_accent"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="Películas" />
+
+        <HorizontalScrollView
+            android:id="@+id/scrollLibFilters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="40dp"
+            android:clipChildren="false"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/rowLibFilters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+        <!-- Hero compacto (1+1+1 líneas) justo bajo chips; sin padding anti-overlap grande -->
+        <TextView
+            android:id="@+id/txtLibItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="48dp"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:maxLines="1"
+            android:minLines="1"
+            android:textColor="@color/emby_text"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:text="Título" />
+
+        <TextView
+            android:id="@+id/txtLibItemMeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="48dp"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:maxLines="1"
+            android:minLines="1"
+            android:textColor="@color/emby_text_secondary"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtLibItemOverview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="2dp"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:maxLines="1"
+            android:minLines="1"
+            android:textColor="#CCCCCC"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- Rejilla pegada al menú (paddingTop mínimo). paddingStart 56dp en código. -->
+    <com.piner.pinertv.ui.widget.FocusStableRecyclerView
+        android:id="@+id/gridLibrary"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipChildren="true"
+        android:clipToPadding="false"
+        android:paddingStart="56dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="40dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/libMenu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

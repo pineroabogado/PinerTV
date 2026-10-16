@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="112dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_cast_tile"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:padding="6dp">
+
+    <ImageView
+        android:id="@+id/imgCast"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/poster_placeholder"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/txtCastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxLines="2"
+        android:textColor="@color/emby_text"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        tools:text="Bob Odenkirk" />
+
+    <TextView
+        android:id="@+id/txtCastRole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxLines="2"
+        android:textColor="@color/emby_text_muted"
+        android:textSize="11sp"
+        tools:text="Jimmy McGill" />
+</LinearLayout>
